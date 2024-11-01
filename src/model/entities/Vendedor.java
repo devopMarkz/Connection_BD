@@ -8,11 +8,11 @@ import java.time.LocalDateTime;
  */
 public class Vendedor {
 
-    private Long id;
-    private String name;
-    private LocalDateTime birthDate;
-    private Double baseSalary;
-    private Department department;
+    private final Long id;
+    private final String name;
+    private final LocalDateTime birthDate;
+    private final Double baseSalary;
+    private final Department department;
 
     /**
      * Construtor privado que cria uma instância de Vendedor a partir de um objeto Builder.

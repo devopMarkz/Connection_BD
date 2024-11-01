@@ -5,8 +5,8 @@ package model.entities;
  */
 public class Department {
 
-    private Long id;
-    private String name;
+    private final Long id;
+    private final String name;
 
     /**
      * Construtor para criar uma instância de Department com o ID e nome especificados.
@@ -35,15 +35,6 @@ public class Department {
      */
     public String getName() {
         return name;
-    }
-
-    /**
-     * Define o nome do departamento.
-     *
-     * @param name o novo nome do departamento.
-     */
-    public void setName(String name) {
-        this.name = name;
     }
 
     /**
