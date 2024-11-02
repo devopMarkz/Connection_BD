@@ -10,6 +10,7 @@ public class Vendedor {
 
     private final Long id;
     private final String name;
+    private final String email;
     private final LocalDateTime birthDate;
     private final Double baseSalary;
     private final Department department;
@@ -25,6 +26,7 @@ public class Vendedor {
         this.birthDate = builder.birthDate;
         this.baseSalary = builder.baseSalary;
         this.department = builder.department;
+        this.email = builder.email;
     }
 
     /**
@@ -88,12 +90,17 @@ public class Vendedor {
                 '}';
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     /**
      * Classe Builder para construir uma instância de Vendedor.
      */
     public static class Builder {
         private Long id;
         private String name;
+        private String email;
         private LocalDateTime birthDate;
         private Double baseSalary;
         private Department department;
@@ -117,6 +124,11 @@ public class Vendedor {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        public Builder email(String email){
+            this.email = email;
             return this;
         }
 
