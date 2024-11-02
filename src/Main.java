@@ -42,9 +42,9 @@ public class Main {
                 vendedores.add(vendedor);
             }
 
-            for (Vendedor vendedor : vendedores){
-                System.out.println(vendedor);
-            }
+            vendedores.stream()
+                    .sorted((o1, o2) -> o1.getId().compareTo(o2.getId()))
+                    .forEach(System.out::println);
 
         } catch (SQLException e) {
             throw new DbException(e.getMessage());
